@@ -21,3 +21,5 @@ ls -all
 sudo service apache2 restart
 ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
 
+sudo ls -all /etc/apache2
+sudo ls -all /etc/apache2/sites-available
