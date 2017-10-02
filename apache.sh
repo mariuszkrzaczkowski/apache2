@@ -23,8 +23,13 @@ ls -all
 sudo service apache2 restart
 ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
 
+echo " ===========    /etc/apache2/conf-available    ============"
 sudo ls -all /etc/apache2/conf-available
+echo " ===========    /etc/apache2/sites-available    ============"
 sudo ls -all /etc/apache2/sites-available
+echo " ===========    /etc/apache2/mods-enabled    ============"
+sudo ls -all /etc/apache2/mods-enabled
+
 
 echo " ===========    /etc/apache2/sites-available/000-default.conf    ============"
 sudo cat /etc/apache2/sites-available/000-default.conf
