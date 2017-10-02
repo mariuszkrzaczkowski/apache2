@@ -1,13 +1,11 @@
 <VirtualHost *:80>
-  # [...]
   ServerName localhost
   DocumentRoot /home/travis/build/mariuszkrzaczkowski/apache2
 
   <Directory "/home/travis/build/mariuszkrzaczkowski/apache2/">
-    Options FollowSymLinks MultiViews ExecCGI
+    Options +Indexes +Includes +FollowSymLinks +MultiViews
     AllowOverride All
-    Order deny,allow
-    Allow from all
+    Require local
   </Directory>
 
   # Wire up Apache to use Travis CI's php-fpm.
@@ -17,18 +15,15 @@
     Alias /php5-fcgi /usr/lib/cgi-bin/php5-fcgi
     FastCgiExternalServer /usr/lib/cgi-bin/php5-fcgi -host 127.0.0.1:9000 -pass-header Authorization
   </IfModule>
-
-  # [...]
 </VirtualHost>
 <VirtualHost *:80>
-  # [...]
   ServerName localtest
   DocumentRoot /var/www/html
 
   <Directory "/var/www/html/">
-    Options FollowSymLinks MultiViews ExecCGI
+    Options +Indexes +Includes +FollowSymLinks +MultiViews
     AllowOverride All
-	Require all granted
+	Require local
   </Directory>
 
   # Wire up Apache to use Travis CI's php-fpm.
@@ -38,6 +33,4 @@
     Alias /php5-fcgi /usr/lib/cgi-bin/php5-fcgi
     FastCgiExternalServer /usr/lib/cgi-bin/php5-fcgi -host 127.0.0.1:9000 -pass-header Authorization
   </IfModule>
-
-  # [...]
 </VirtualHost>
