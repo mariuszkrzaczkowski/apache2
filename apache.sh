@@ -1,3 +1,6 @@
+sudo apt-get update
+sudo apt-get install apache2 libapache2-mod-fastcgi
+
 sudo ls -all /etc/apache2/sites-available
 sudo ls -all /etc/apache2/sites-enabled
 
@@ -6,9 +9,6 @@ cat /etc/apache2/sites-available/000-default.conf
 echo " ===========    /etc/apache2/sites-available/default-ssl.conf    ============"
 cat /etc/apache2/sites-available/default-ssl.conf
 
-
-sudo apt-get update
-sudo apt-get install apache2 libapache2-mod-fastcgi
   # enable php-fpm
 sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
 sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.d/www.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.d/www.conf
