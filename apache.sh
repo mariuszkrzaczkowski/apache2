@@ -23,7 +23,7 @@ ls -all
 sudo service apache2 restart
 ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
 
-sudo ls -all /etc/apache2
+sudo ls -all /etc/apache2/conf-available
 sudo ls -all /etc/apache2/sites-available
 
 echo " ===========    /etc/apache2/sites-available/000-default.conf    ============"
@@ -37,6 +37,10 @@ sudo netstat -antp | grep 9000
 
 echo " ===========    /etc/apache2/apache2.conf    ============"
 sudo cat /etc/apache2/apache2.conf
+
+echo " ===========    /etc/apache2/conf-available/php5-fpm.conf   ============"
+sudo cat /etc/apache2/conf-available/php5-fpm.conf
+
 
 echo " ===========    ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm    ============"
 #sudo cat ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
