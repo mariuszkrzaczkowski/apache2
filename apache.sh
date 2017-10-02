@@ -1,5 +1,7 @@
-pwd
-
+echo " ===========    /etc/apache2/sites-available/000-default.conf    ============"
+cat /etc/apache2/sites-available/000-default.conf
+echo " ===========    /etc/apache2/sites-available/default-ssl.conf    ============"
+cat /etc/apache2/sites-available/default-ssl.conf
 
 sudo apt-get update
 sudo apt-get install apache2 libapache2-mod-fastcgi
