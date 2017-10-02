@@ -1,9 +1,9 @@
 <VirtualHost *:80>
   # [...]
 
-  DocumentRoot /var/www/html
+  DocumentRoot /home/travis/build/mariuszkrzaczkowski/apache2
 
-  <Directory "/var/www/html/">
+  <Directory "/home/travis/build/mariuszkrzaczkowski/apache2/">
     Options FollowSymLinks MultiViews ExecCGI
     AllowOverride All
     Order deny,allow
@@ -23,9 +23,9 @@
 <VirtualHost *:80>
   # [...]
   ServerName localtest
-  DocumentRoot /var/www/html
+  DocumentRoot /home/travis/build/mariuszkrzaczkowski/apache2
 
-  <Directory "/var/www/html/">
+  <Directory "/home/travis/build/mariuszkrzaczkowski/apache2/">
     Options FollowSymLinks MultiViews ExecCGI
     AllowOverride All
 	Require all granted
