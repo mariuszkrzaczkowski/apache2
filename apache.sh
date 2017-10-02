@@ -39,7 +39,7 @@ echo " ===========    /etc/apache2/apache2.conf    ============"
 sudo cat /etc/apache2/apache2.conf
 
 echo " ===========    ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm    ============"
-sudo cat ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
+#sudo cat ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
 
 
 sudo ls -all /var/www/html
