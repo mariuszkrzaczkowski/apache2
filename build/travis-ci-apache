@@ -23,9 +23,9 @@
 <VirtualHost *:80>
   # [...]
   ServerName localtest
-  DocumentRoot /home/travis/build/mariuszkrzaczkowski/apache2
+  DocumentRoot /var/www/html
 
-  <Directory "/home/travis/build/mariuszkrzaczkowski/apache2/">
+  <Directory "/var/www/html/">
     Options FollowSymLinks MultiViews ExecCGI
     AllowOverride All
 	Require all granted
