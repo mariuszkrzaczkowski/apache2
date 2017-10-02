@@ -23,3 +23,6 @@ sudo service apache2 restart
 
 sudo ls -all /etc/apache2
 sudo ls -all /etc/apache2/sites-available
+
+echo " ===========    /etc/apache2/sites-available/000-default    ============"
+cat /etc/apache2/sites-available/000-default
