@@ -25,17 +25,21 @@ sudo service apache2 restart
 
 echo " ===========    /etc/apache2/conf-available    ============"
 sudo ls -all /etc/apache2/conf-available
+
 echo " ===========    /etc/apache2/sites-available    ============"
 sudo ls -all /etc/apache2/sites-available
+
 echo " ===========    /etc/apache2/mods-enabled    ============"
 sudo ls -all /etc/apache2/mods-enabled
 
+echo " ===========    ls -l /etc/apache2/sites-enabled/    ============"
+sudo ls -l /etc/apache2/sites-enabled/
+
+echo " ===========    ls -l /etc/apache2/sites-enabled/    ============"
+sudo ls -l /usr/lib/cgi-bin
 
 echo " ===========    /etc/apache2/sites-available/000-default.conf    ============"
 sudo cat /etc/apache2/sites-available/000-default.conf
-
-echo " ===========    ls -l /etc/apache2/sites-enabled/    ============"
-sudo ls -l /etc/apache2/sites-enabled/
 
 echo " ===========    sudo netstat -antp | grep 9000    ============"
 sudo netstat -antp | grep 9000
