@@ -7,7 +7,8 @@ sudo ls -all /etc/apache2/sites-available
 sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
 #sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.d/www.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.d/www.conf
 sudo cp -f www.conf ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.d/www.conf
-sudo a2enmod rewrite actions fastcgi alias
+sudo a2enmod rewrite actions fastcgi alias cgi
+
 echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   # configure apache virtual hosts
 sudo cp -f build/travis-ci-apache /etc/apache2/sites-available/000-default.conf

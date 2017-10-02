@@ -5,8 +5,7 @@ ServerName localhost
   <Directory "/var/www/html/">
     Options FollowSymLinks MultiViews ExecCGI
     AllowOverride All
-    Order deny,allow
-    Allow from all
+    Require all granted
   </Directory>
   
 	ServerAdmin webmaster@localhost
