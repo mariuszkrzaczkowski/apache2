@@ -9,8 +9,8 @@ sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.d/www.conf.default
 sudo a2enmod rewrite actions fastcgi alias
 echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   # configure apache virtual hosts
-sudo cp -f build/travis-ci-apache /etc/apache2/sites-available/000-default
-sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)?g" --in-place /etc/apache2/sites-available/000-default
+sudo cp -f build/travis-ci-apache /etc/apache2/sites-available/000-default.conf
+sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)?g" --in-place /etc/apache2/sites-available/000-default.conf
 
 sudo cp -r -f /home/travis/build/mariuszkrzaczkowski/apache2/xxx.php /var/www/html
 sudo chown -R www-data:www-data /var/www/html
@@ -24,5 +24,5 @@ sudo service apache2 restart
 sudo ls -all /etc/apache2
 sudo ls -all /etc/apache2/sites-available
 
-echo " ===========    /etc/apache2/sites-available/000-default    ============"
-cat /etc/apache2/sites-available/000-default
+echo " ===========    /etc/apache2/sites-available/000-default.conf    ============"
+cat /etc/apache2/sites-available/000-default.conf
