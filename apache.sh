@@ -26,3 +26,5 @@ sudo ls -all /etc/apache2/sites-available
 
 echo " ===========    /etc/apache2/sites-available/000-default.conf    ============"
 cat /etc/apache2/sites-available/000-default.conf
+echo " ===========    /etc/apache2/sites-available/default-ssl.conf    ============"
+cat /etc/apache2/sites-available/default-ssl.conf
