@@ -15,7 +15,7 @@ sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)?g" --in-place /etc/apache2/sites-availa
 
 sudo cp -r -f /home/travis/build/mariuszkrzaczkowski/apache2/xxx.php /var/www/html
 sudo chown -R www-data:www-data /var/www/html
-sudo chmod -R 777 /var/www/html
+sudo chmod -R 755 /var/www/html
 sudo chmod -R 777 /home/travis/build/mariuszkrzaczkowski/apache2
 ls -all 
 
