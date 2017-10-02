@@ -1,6 +1,6 @@
 <VirtualHost *:80>
   # [...]
-
+  ServerName localhost
   DocumentRoot /home/travis/build/mariuszkrzaczkowski/apache2
 
   <Directory "/home/travis/build/mariuszkrzaczkowski/apache2/">
